@@ -1,0 +1,41 @@
+{
+  "name": "bf-contact-site",
+  "version": "1.0.0",
+  "description": "simple contact page for Bracket Factory",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "stylus source/stylesheets/index.styl -o static/css",
+    "watch-css": "stylus source/stylesheets/index.styl -o static/css -w",
+    "clean": "rm -rf static/css && mkdir -p static/css",
+    "build": "npm run clean && npm run build-css",
+    "watch": "npm run clean && npm run watch-css & nodemon server -e js,jade",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/git-bracketfactory/BF-Contact-From-Scratch.git"
+  },
+  "keywords": [
+    "Bracket",
+    "Factory",
+    "NodeJS",
+    "single",
+    "page",
+    "web",
+    "applications"
+  ],
+  "author": "Bracket Factory",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/git-bracketfactory/BF-Contact-From-Scratch/issues"
+  },
+  "homepage": "https://github.com/git-bracketfactory/BF-Contact-From-Scratch#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.9.2",
+    "pug": "^2.0.0-beta6",
+    "stylus": "^0.54.5"
+  }
+}
